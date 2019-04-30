@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Application;
+using AddMicroservice.Application;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AddMicroservice.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("")]
     [ApiController]
     public class AddController : ControllerBase
     {

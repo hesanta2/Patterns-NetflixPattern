@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Application
+namespace AddMicroservice.Application
 {
     public class AddService : IAddService
     {

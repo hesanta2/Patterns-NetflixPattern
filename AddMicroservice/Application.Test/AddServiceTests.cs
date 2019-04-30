@@ -2,7 +2,7 @@ using Moq;
 using NUnit.Framework;
 using FluentAssertions;
 
-namespace Application.Tests
+namespace AddMicroservice.Application.Tests
 {
     public class AddServiceTests
     {

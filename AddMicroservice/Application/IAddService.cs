@@ -1,4 +1,4 @@
-﻿namespace Application
+﻿namespace AddMicroservice.Application
 {
     public interface IAddService
     {
