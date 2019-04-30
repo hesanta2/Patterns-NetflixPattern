@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Common.Infrastructure.Infrastructure
+namespace Common.Infrastructure
 {
     public abstract class InMemoryRepository<T> : IRepository<T> where T : IEntity
     {
@@ -13,14 +13,19 @@ namespace Common.Infrastructure.Infrastructure
 
         public InMemoryRepository()
         {
-            this.InitMemoryEntities(this.inMemoryEntities);
+            this.Seed(this.inMemoryEntities);
         }
 
-        protected abstract void InitMemoryEntities(ICollection<T> inMemoryEntities);
+        protected abstract void Seed(ICollection<T> inMemoryEntities);
 
         public void Add(T entity)
         {
             this.inMemoryEntities.Add(entity);
+        }
+
+        public T First(Func<T, bool> expression = null)
+        {
+            return expression != null ? this.inMemoryEntities.First(expression) : this.inMemoryEntities.FirstOrDefault();
         }
 
         public T Get(long id)
