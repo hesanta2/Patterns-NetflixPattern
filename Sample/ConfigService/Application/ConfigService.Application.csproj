@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\ConfigService.Domain.csproj" />
+    <ProjectReference Include="..\Infrastructure\ConfigService.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
